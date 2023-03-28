@@ -55,7 +55,8 @@ const questions = [
 
 // TODO: Create a function to write README file // fileName got cut from paramaters
 function writeToFile(data) {
-  fs.appendFile("NewREADME.md", content, (err) =>
+  console.log(data)
+  fs.appendFile("NewREADME.md", markdown(data), (err) =>
     // if theres an error, log the error. otherwise, log 'Commit logged!'
     err ? console.error(err) : console.log("NewREADME made!")
   );
